@@ -1,12 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 – Fundamentos da Web Dinâmica - Gisele Rodrigues de Lima Albuquerque</title>
+  <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica. Desenvolvido por Gisele Rodrigues de Lima Albuquerque. Página de perfil com informações do curso, projetos e dados de contato.">
+  <meta name="author" content="Gisele Rodrigues de Lima Albuquerque">
+  
+  <!-- Importação do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="estilos/base.css">
+  <script src="scripts/obterdatas.js" defer></script>
 </head>
 <body>
-    <h1>Gisele Albuquerque</h1> 
-    <p>Software developer</p>   
+  <header>
+    <span>WDD 131</span>
+    <h1>Fundamentos da Web Dinâmica</h1>
+    <nav>
+      <a href="https://www.linkedin.com/in/gisele-albuquerque-170a2133" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=por&id=p7#p7" target="_blank" rel="noopener">Escritura</a>
+      <a href="#">Projeto Final</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Gisele Rodrigues de Lima Albuquerque</h1>
+    
+    <div class="cards-container">
+      <section class="card">
+        <h2>Sobre Mim</h2>
+        <img src="imagens/perfil.jpg" alt="Foto de perfil de Gisele Rodrigues de Lima Albuquerque" width="150" height="150">
+        <p>Olá! Sou estudante do curso Desenvolvimento de Software. Aqui você encontrará atualizações sobre o meu aprendizado em HTML, CSS e JavaScript dinâmico.</p>
+      </section>
+
+      <section class="card">
+        <h2>Recursos do Curso</h2>
+        <img src="imagens/recursos.jpg" alt="Ilustração sobre código e desenvolvimento web" width="150" height="150">
+        <p>Acompanhe os links rápidos e documentos de referência utilizados ao longo das atividades do semestre.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="anoatual"></span> Gisele Rodrigues de Lima Albuquerque | Ceará/Brasil</p>
+    <p id="ultimaModificacao"></p>
+  </footer>
 </body>
 </html>
