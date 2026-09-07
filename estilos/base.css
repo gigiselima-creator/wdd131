@@ -1,4 +1,3 @@
-CSS
 :root {
   --primary-color: #003366;
   --secondary-color: #0055a5;
@@ -25,7 +24,7 @@ header {
 }
 
 header span {
-  display: block;
+  display: block; /* Requisito do instrução */
   font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 1px;
@@ -36,7 +35,7 @@ header h1 {
   font-size: 1.8rem;
 }
 
-/* Nav com Flexbox */
+/* Nav com CSS Flex */
 nav {
   display: flex;
   justify-content: center;
@@ -60,7 +59,7 @@ nav a:hover {
   border-radius: 4px;
 }
 
-/* Main Layout com Grid */
+/* Main Layout com CSS Grid */
 main {
   max-width: 900px;
   margin: 2rem auto;

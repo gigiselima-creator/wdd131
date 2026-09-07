@@ -1,4 +1,4 @@
-// Preenche dinamicamente o ano de direitos autorais no rodapé
+// Preenche o ano atual de forma dinâmica
 const elementoAno = document.getElementById("anoatual");
 if (elementoAno) {
   elementoAno.textContent = new Date().getFullYear();
