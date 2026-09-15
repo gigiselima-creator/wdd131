@@ -1,0 +1,23 @@
+@media (min-width: 600px) {
+    #menu {
+        display: none; /* Esconde botão hambúrguer no desktop */
+    }
+
+    .navigation {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+    }
+
+    .navigation a {
+        border-bottom: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
