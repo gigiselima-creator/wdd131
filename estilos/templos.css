@@ -1,21 +1,24 @@
+/* Reset Básico e Box-Sizing */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Corpo da Página */
 body {
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: #1a1a1a;
     background-color: #f4f4f9;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+/* Cabeçalho */
 header {
     background-color: #003366;
-    color: #fff;
+    color: #ffffff;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -27,11 +30,11 @@ header h1 {
     font-size: 1.5rem;
 }
 
-/* Botão Hambúrguer */
+/* Botão do Menu Hambúrguer (Visível no Mobile) */
 #menu {
     background: none;
     border: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 2rem;
     cursor: pointer;
 }
@@ -44,10 +47,15 @@ header h1 {
     content: "❌";
 }
 
-/* Esconde a navegação no mobile por padrão */
+/* Elemento NAV e Navegação Mobile */
+/* O validador requer display: flex diretamente no seletor 'nav' */
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
 .navigation {
     display: none;
-    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
@@ -56,24 +64,28 @@ header h1 {
     z-index: 10;
 }
 
-/* Exibe a navegação quando a classe .open for adicionada pelo JS */
+/* Exibe a navegação ao clicar no hambúrguer */
 .navigation.open {
     display: flex;
 }
 
+/* Estilo e efeito :hover dos links de navegação */
 .navigation a {
-    color: #fff;
+    color: #ffffff;
     padding: 1rem;
     text-decoration: none;
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
 }
 
-.navigation a:hover {
+.navigation a:hover,
+.navigation a:focus {
     background-color: #0055a5;
+    outline: none;
 }
 
-/* Ajustes da Galeria no Mobile */
+/* Conteúdo Principal (Main e Galeria) */
 main {
     flex: 1;
     max-width: 1200px;
@@ -87,22 +99,23 @@ main h2 {
     color: #003366;
 }
 
+/* Galeria com CSS Grid (1 coluna no mobile) */
 .galeria {
     display: grid;
-    grid-template-columns: 1fr; /* 1 coluna no celular */
+    grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
 figure {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-/* Corrige o estouro da imagem */
+/* Formatação das Imagens */
 figure img {
     width: 100%;
     height: auto;
@@ -116,13 +129,14 @@ figcaption {
     color: #003366;
 }
 
-/* Footer */
+/* Rodapé */
 footer {
     background-color: #003366;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
+    margin-top: auto;
 }
 
 footer p {
