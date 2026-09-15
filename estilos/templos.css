@@ -44,7 +44,7 @@ header h1 {
     content: "❌";
 }
 
-/* Navegação Mobile */
+/* Esconde a navegação no mobile por padrão */
 .navigation {
     display: none;
     flex-direction: column;
@@ -53,8 +53,10 @@ header h1 {
     left: 0;
     width: 100%;
     background-color: #002244;
+    z-index: 10;
 }
 
+/* Exibe a navegação quando a classe .open for adicionada pelo JS */
 .navigation.open {
     display: flex;
 }
@@ -71,7 +73,7 @@ header h1 {
     background-color: #0055a5;
 }
 
-/* Main e Galeria */
+/* Ajustes da Galeria no Mobile */
 main {
     flex: 1;
     max-width: 1200px;
@@ -87,7 +89,7 @@ main h2 {
 
 .galeria {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 coluna no celular */
     gap: 1.5rem;
 }
 
@@ -100,10 +102,12 @@ figure {
     text-align: center;
 }
 
+/* Corrige o estouro da imagem */
 figure img {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
 }
 
 figcaption {

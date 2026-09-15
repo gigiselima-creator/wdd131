@@ -1,10 +1,12 @@
 @media (min-width: 600px) {
+    /* Oculta o botão hambúrguer no desktop */
     #menu {
-        display: none; /* Esconde botão hambúrguer no desktop */
+        display: none;
     }
 
+    /* Restaura o menu horizontal */
     .navigation {
-        display: flex;
+        display: flex !important;
         position: static;
         flex-direction: row;
         background-color: transparent;
@@ -17,6 +19,7 @@
         border-radius: 4px;
     }
 
+    /* Galeria em grade responsiva no desktop */
     .galeria {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }

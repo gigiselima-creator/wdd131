@@ -5,22 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Álbum de fotos de templos da Igreja de Jesus Cristo dos Santos dos Últimos Dias.">
     <title>Álbum do Templo</title>
-    
-    <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS (Mobile First + Media Query) -->
+
+    <!-- Verifique se os nomes das pastas no GitHub estão exatamente em minúsculas -->
     <link rel="stylesheet" href="estilos/templos.css">
     <link rel="stylesheet" href="estilos/templos-grandes.css">
-    
-    <!-- JavaScript Defer -->
+
     <script src="scripts/templos.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Álbum do Templo</h1>
+        <!-- O botão precisa ter o id="menu" para o JS funcionar -->
         <button id="menu" aria-label="Abrir Menu"></button>
         <nav class="navigation">
             <a href="#">Página Inicial</a>
@@ -30,7 +29,6 @@
             <a href="#">Pequeno</a>
         </nav>
     </header>
-
     <main>
         <h2>Galeria de Templos</h2>
         <div class="galeria">
@@ -72,7 +70,6 @@
             </figure>
         </div>
     </main>
-
     <footer>
         <p>&copy; <span id="currentyear"></span> | Gisele Albuquerque | Brasil</p>
         <p id="lastModified"></p>
