@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página do País - Brasil</title>
+  <meta name="description" content="Informações gerais e clima sobre o Brasil para o projeto WDD131.">
+  <meta name="author" content="Gisele Albuquerque">
+  <link rel="stylesheet" href="estilos/local.css">
+  <script src="scripts/local.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Brasil</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source media="(min-width: 650px)" srcset="imagens/hero-large.webp">
+        <img src="imagens/hero-small.webp" alt="Paisagem representativa do Brasil" width="1000" height="500">
+      </picture>
+    </section>
+
+    <section class="data-card">
+      <h2>Dados Gerais</h2>
+      <ul>
+        <li><strong>Área:</strong> 8.515.767 km²</li>
+        <li><strong>População:</strong> ~214 milhões</li>
+        <li><strong>Capital:</strong> Brasília</li>
+        <li><strong>Língua Oficial:</strong> Português</li>
+        <li><strong>Moeda:</strong> Real (BRL)</li>
+      </ul>
+    </section>
+
+    <section class="weather-card">
+      <h2 class="weather-title">Clima</h2>
+      <img src="imagens/weather.svg" alt="Ícone do Clima" class="weather-icon-mobile">
+      <ul>
+        <li><strong>Temperatura:</strong> <span id="temp">16</span>°C</li>
+        <li><strong>Condição:</strong> Chuva</li>
+        <li><strong>Vento:</strong> <span id="wind">8</span> km/h</li>
+        <li><strong>Sensação Térmica:</strong> <span id="chill"></span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Gisele Albuquerque | Brasil</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

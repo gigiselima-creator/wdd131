@@ -1,0 +1,103 @@
+:root {
+  --primary-color: #009c3b;   /* Verde Bandeira */
+  --secondary-color: #ffdf00; /* Amarelo */
+  --accent-color: #002776;    /* Azul */
+  --neutral-light: #f4f4f4;
+  --text-color: #222222;
+  --font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--neutral-light);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.data-card, .weather-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-top: 5px solid var(--accent-color);
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Ícones de clima na visualização mobile */
+.weather-icon-mobile {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: var(--accent-color);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Layout para telas maiores (Desktop) */
+@media (min-width: 650px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    grid-column: 1 / -1;
+  }
+
+  .weather-icon-mobile {
+    display: none; /* Oculta a imagem SVG no desktop */
+  }
+
+  /* Exibe o emoticon no pseudoelemento ::after no desktop */
+  .weather-title::after {
+    content: " ⛅";
+    font-size: 1.2em;
+  }
+}
