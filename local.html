@@ -34,8 +34,13 @@
     </section>
 
 <section class="weather-card">
-  <h2>Clima</h2>
-  <img src="imagens/weather.svg" alt="Ícone do Clima" class="weather-icon-mobile">
+  <h2 class="weather-title">Clima</h2>
+  
+  <!-- Ícone SVG embutido diretamente -->
+  <svg class="weather-icon-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor">
+    <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+  </svg>
+
   <ul>
     <li><strong>Temperatura:</strong> <span id="temp">10</span>°C</li>
     <li><strong>Condição:</strong> Chuva</li>
