@@ -81,22 +81,16 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Layout para telas maiores (Desktop) */
+/* Oculta o ícone SVG em telas amplas */
 @media (min-width: 650px) {
-  main {
-    grid-template-columns: 1fr 1fr;
+  .weather-card img,
+  section:nth-of-type(3) img {
+    display: none;
   }
 
-  .hero {
-    grid-column: 1 / -1;
-  }
-
-  .weather-icon-mobile {
-    display: none; /* Oculta a imagem SVG no desktop */
-  }
-
-  /* Exibe o emoticon no pseudoelemento ::after no desktop */
-  .weather-title::after {
+  /* Adiciona o emoticon após o título da seção de Clima */
+  .weather-card h2::after,
+  section:nth-of-type(3) h2::after {
     content: " ⛅";
     font-size: 1.2em;
   }
