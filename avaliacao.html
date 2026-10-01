@@ -1,0 +1,51 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confirmação da avaliação de produto">
+    <meta name="author" content="Gisele Albuquerque">
+    <title>Avaliação Enviada</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+
+<body>
+    <header>
+        <h1>Avaliação Enviada</h1>
+    </header>
+
+    <main>
+        <section class="confirmation">
+            <h2>Obrigado pela sua avaliação!</h2>
+
+            <p>
+                Sua avaliação foi registrada com sucesso.
+            </p>
+
+            <p>
+                Número de avaliações concluídas:
+                <strong id="contador">0</strong>
+            </p>
+
+            <a href="formulario.html">Voltar ao formulário</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gisele Albuquerque | Brasil</p>
+        <p>Última atualização: 2026</p>
+    </footer>
+
+    <script>
+        let contador = Number(localStorage.getItem("contadorAvaliacoes")) || 0;
+
+        contador++;
+
+        localStorage.setItem("contadorAvaliacoes", contador);
+
+        document.querySelector("#contador").textContent = contador;
+    </script>
+</body>
+</html>
+```
