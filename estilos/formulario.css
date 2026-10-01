@@ -95,13 +95,14 @@ textarea {
     color: #f5b301;
 }
 
-fieldset label:has(input[type="checkbox"]) {
-    font-weight: normal;
-    margin-top: 0.7rem;
+fieldset input[type="checkbox"] {
+    margin-right: 0.5rem;
 }
 
-fieldset label input[type="checkbox"] {
-    margin-right: 0.5rem;
+fieldset input[type="checkbox"] + label {
+    display: inline;
+    font-weight: normal;
+    margin: 0;
 }
 
 span {
