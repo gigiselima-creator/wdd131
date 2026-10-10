@@ -1,13 +1,13 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Avalie um produto informando sua classificação, data de instalação, recursos úteis e comentários sobre sua experiência.">
-
+    <meta
+        name="description"
+        content="Avalie um produto informando sua classificação, data de instalação, recursos úteis e comentários sobre sua experiência."
+    >
     <meta name="author" content="Gisele Albuquerque">
 
     <title>Avaliação de Produto</title>
@@ -15,189 +15,166 @@
     <link rel="stylesheet" href="estilos/formulario.css">
     <script src="scripts/formulario.js" defer></script>
 </head>
-
 <body>
-
     <header>
         <h1>Avaliação de Produto</h1>
     </header>
 
     <main>
+        <h2>Compartilhe sua experiência</h2>
+        <p>Preencha o formulário abaixo para registrar sua avaliação.</p>
 
         <form method="get" action="avaliacao.html">
-
-            <fieldset>
-                <legend>Informações do Produto</legend>
-
-                <label for="produto">Nome do Produto</label>
-
+            <div class="campo">
+                <label for="produto">Produto:</label>
                 <select id="produto" name="produto" required>
-                    <option value="" disabled selected>
-                        Selecione um Produto...
+                    <option value="" selected disabled>
+                        Selecione um produto...
                     </option>
                 </select>
-
-            </fieldset>
-
+            </div>
 
             <fieldset>
-                <legend>Classificação Geral</legend>
+                <legend>Classificação do produto</legend>
+                <p>Selecione uma nota de 1 a 5 estrelas.</p>
 
                 <div class="rating">
-
-                    <label for="rating1">☆</label>
                     <input
                         type="radio"
-                        id="rating1"
+                        id="classificacao1"
                         name="classificacao"
                         value="1"
                         required
                     >
+                    <label for="classificacao1">1 estrela</label>
 
-                    <label for="rating2">☆</label>
                     <input
                         type="radio"
-                        id="rating2"
+                        id="classificacao2"
                         name="classificacao"
                         value="2"
-                        required
                     >
+                    <label for="classificacao2">2 estrelas</label>
 
-                    <label for="rating3">☆</label>
                     <input
                         type="radio"
-                        id="rating3"
+                        id="classificacao3"
                         name="classificacao"
                         value="3"
-                        required
                     >
+                    <label for="classificacao3">3 estrelas</label>
 
-                    <label for="rating4">☆</label>
                     <input
                         type="radio"
-                        id="rating4"
+                        id="classificacao4"
                         name="classificacao"
                         value="4"
-                        required
                     >
+                    <label for="classificacao4">4 estrelas</label>
 
-                    <label for="rating5">☆</label>
                     <input
                         type="radio"
-                        id="rating5"
+                        id="classificacao5"
                         name="classificacao"
                         value="5"
-                        required
                     >
-
+                    <label for="classificacao5">5 estrelas</label>
                 </div>
-
             </fieldset>
 
-
-            <fieldset>
-                <legend>Data de Instalação</legend>
-
-                <label for="data">Data de Instalação</label>
-
+            <div class="campo">
+                <label for="data">Data de instalação:</label>
                 <input
                     type="date"
                     id="data"
                     name="data"
                     required
                 >
-
-            </fieldset>
-
+            </div>
 
             <fieldset>
-                <legend>Recursos Úteis</legend>
+                <legend>Quais recursos você considera úteis?</legend>
 
-                <input
-                    type="checkbox"
-                    id="recurso1"
-                    name="recursos"
-                    value="facilidade"
-                >
-                <label for="recurso1">
-                    Facilidade de instalação
-                </label>
+                <div class="recurso">
+                    <input
+                        type="checkbox"
+                        id="recurso1"
+                        name="recursos"
+                        value="facilidade de uso"
+                    >
+                    <label for="recurso1">Facilidade de uso</label>
+                </div>
 
-                <input
-                    type="checkbox"
-                    id="recurso2"
-                    name="recursos"
-                    value="desempenho"
-                >
-                <label for="recurso2">
-                    Desempenho
-                </label>
+                <div class="recurso">
+                    <input
+                        type="checkbox"
+                        id="recurso2"
+                        name="recursos"
+                        value="durabilidade"
+                    >
+                    <label for="recurso2">Durabilidade</label>
+                </div>
 
-                <input
-                    type="checkbox"
-                    id="recurso3"
-                    name="recursos"
-                    value="durabilidade"
-                >
-                <label for="recurso3">
-                    Durabilidade
-                </label>
+                <div class="recurso">
+                    <input
+                        type="checkbox"
+                        id="recurso3"
+                        name="recursos"
+                        value="bom desempenho"
+                    >
+                    <label for="recurso3">Bom desempenho</label>
+                </div>
 
-                <input
-                    type="checkbox"
-                    id="recurso4"
-                    name="recursos"
-                    value="qualidade"
-                >
-                <label for="recurso4">
-                    Qualidade
-                </label>
-
+                <div class="recurso">
+                    <input
+                        type="checkbox"
+                        id="recurso4"
+                        name="recursos"
+                        value="custo-beneficio"
+                    >
+                    <label for="recurso4">Bom custo-benefício</label>
+                </div>
             </fieldset>
 
-
-            <fieldset>
-                <legend>Comentários</legend>
-
-                <label for="avaliacao">
-                    Avaliação Escrita
-                    <span>(Opcional)</span>
-                </label>
-
+            <div class="campo">
+                <label for="avaliacao">Comentários adicionais (opcional):</label>
                 <textarea
                     id="avaliacao"
                     name="avaliacao"
+                    rows="5"
+                    placeholder="Conte um pouco sobre sua experiência..."
                 ></textarea>
+            </div>
 
-
-                <label for="usuario">
-                    Nome de Usuário
-                    <span>(Opcional)</span>
-                </label>
-
+            <div class="campo">
+                <label for="usuario">Seu nome (opcional):</label>
                 <input
                     type="text"
                     id="usuario"
                     name="usuario"
+                    autocomplete="name"
                 >
+            </div>
 
-            </fieldset>
-
-
+            <!-- Identificador único para evitar contar o mesmo envio novamente -->
             <input
-                type="submit"
-                value="Enviar Avaliação"
+                type="hidden"
+                id="submissionId"
+                name="submissionId"
+                value=""
             >
 
+            <button type="submit">Enviar avaliação</button>
         </form>
-
     </main>
 
-
     <footer>
-        <p>&copy; 2026 Gisele Albuquerque | Brasil</p>
-        <p>Última atualização: 2026</p>
+        <p>&copy; <span id="ano"></span> Gisele Albuquerque | WDD131</p>
     </footer>
 
+    <script>
+        document.querySelector("#ano").textContent =
+            new Date().getFullYear();
+    </script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* Configurações gerais */
 * {
     box-sizing: border-box;
 }
@@ -5,15 +6,17 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+    line-height: 1.6;
     color: #222;
+    background-color: #f4f4f4;
 }
 
-header {
-    background-color: #183153;
-    color: white;
+header,
+footer {
+    padding: 1rem;
     text-align: center;
-    padding: 1.5rem;
+    color: #fff;
+    background-color: #183153;
 }
 
 header h1 {
@@ -22,55 +25,45 @@ header h1 {
 }
 
 main {
+    width: 90%;
     max-width: 650px;
     margin: 2rem auto;
-    padding: 0 1rem;
 }
 
+h2 {
+    color: #183153;
+}
+
+/* Formulário */
 form {
-    background-color: white;
     padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-fieldset {
-    border: 1px solid #bbb;
+    background-color: #fff;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
 }
 
-legend {
-    font-weight: bold;
-    padding: 0 0.5rem;
+.campo {
+    margin-bottom: 1.25rem;
 }
 
-label {
+.campo > label {
     display: block;
-    font-weight: bold;
-    margin-top: 1rem;
     margin-bottom: 0.4rem;
+    font-weight: bold;
 }
 
 select,
 input[type="date"],
 input[type="text"],
 textarea {
+    display: block;
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #777;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: inherit;
-}
-
-select:focus,
-input[type="date"]:focus,
-input[type="text"]:focus,
-textarea:focus {
-    outline: 2px solid #28527a;
-    outline-offset: 2px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #222;
+    font: inherit;
 }
 
 textarea {
@@ -78,111 +71,117 @@ textarea {
     resize: vertical;
 }
 
-
-/* Classificação por estrelas */
-
-.rating {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    gap: 0.3rem;
+/* Grupos de campos */
+fieldset {
+    margin: 0 0 1.25rem;
+    padding: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 5px;
 }
 
-.rating input {
-    position: absolute;
-    opacity: 0;
+legend {
+    padding: 0 0.4rem;
+    font-weight: bold;
+    color: #183153;
+}
+
+/* Classificação */
+.rating {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+    margin-top: 0.75rem;
 }
 
 .rating label {
-    font-size: 2rem;
-    color: #555;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
     cursor: pointer;
-    margin: 0;
 }
 
-.rating label:hover,
-.rating label:hover ~ label,
-.rating input:checked ~ label {
-    color: #f5b301;
+.rating input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #183153;
 }
 
-.rating input:focus-visible + label {
-    outline: 2px solid #28527a;
+/* Recursos */
+.recurso {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.recurso input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #183153;
+}
+
+.recurso label {
+    cursor: pointer;
+}
+
+/* Foco visível para navegação por teclado */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 3px solid #28527a;
     outline-offset: 3px;
 }
 
-
-/* Checkboxes */
-
-fieldset input[type="checkbox"] {
-    margin-right: 0.5rem;
-    width: auto;
-}
-
-fieldset input[type="checkbox"] + label {
-    display: inline;
-    font-weight: normal;
-    margin: 0;
-}
-
-
-/* Campos opcionais */
-
-span {
-    font-size: 0.85rem;
-    font-weight: normal;
-}
-
-
 /* Botão */
-
-input[type="submit"] {
+button {
+    display: block;
     width: 100%;
-    padding: 0.9rem;
+    padding: 0.85rem 1rem;
     border: none;
     border-radius: 5px;
     background-color: #183153;
-    color: white;
-    font-size: 1.1rem;
+    color: #fff;
+    font: inherit;
     font-weight: bold;
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
+button:hover {
     background-color: #28527a;
 }
 
-input[type="submit"]:focus-visible {
-    outline: 2px solid #183153;
-    outline-offset: 3px;
-}
-
-
-/* Rodapé */
-
-footer {
-    background-color: #183153;
-    color: white;
-    text-align: center;
+/* Página de confirmação */
+.confirmacao {
     padding: 1.5rem;
-    margin-top: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+    text-align: center;
 }
 
-footer p {
-    margin: 0.3rem;
+.confirmacao a {
+    color: #183153;
+    font-weight: bold;
 }
 
+.confirmacao a:hover {
+    color: #28527a;
+}
 
-/* Desktop */
+#contador {
+    color: #183153;
+    font-size: 1.5rem;
+}
 
+/* Responsividade */
 @media screen and (min-width: 700px) {
-
     main {
-        max-width: 700px;
+        width: 85%;
     }
 
-    form {
+    form,
+    .confirmacao {
         padding: 2rem;
     }
 }
-

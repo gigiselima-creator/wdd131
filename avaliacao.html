@@ -1,56 +1,51 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Confirmação do envio da avaliação de produto e acompanhamento do número de avaliações realizadas.">
-
+    <meta
+        name="description"
+        content="Confirme o envio da sua avaliação de produto e consulte o total de avaliações registradas neste navegador."
+    >
     <meta name="author" content="Gisele Albuquerque">
 
-    <title>Avaliação Enviada</title>
+    <title>Confirmação de Avaliação de Produto</title>
 
     <link rel="stylesheet" href="estilos/formulario.css">
     <script src="scripts/avaliacao.js" defer></script>
 </head>
-
 <body>
-
     <header>
-        <h1>Avaliação Enviada</h1>
+        <h1>Avaliação de Produto</h1>
     </header>
 
     <main>
+        <section class="confirmacao">
+            <h2>Confirmação</h2>
 
-        <section class="confirmation">
-
-            <h2>Obrigado pela sua avaliação!</h2>
-
-            <p>
-                Sua avaliação foi registrada com sucesso.
+            <p id="mensagem" aria-live="polite">
+                Verificando sua avaliação...
             </p>
 
             <p>
-                Número de avaliações concluídas:
+                Total de avaliações registradas neste navegador:
                 <strong id="contador">0</strong>
             </p>
 
-            <a href="formulario.html">Voltar ao formulário</a>
-
+            <p>
+                <a href="formulario.html">Voltar ao formulário</a>
+            </p>
         </section>
-
     </main>
 
     <footer>
-        <p>&copy; 2026 Gisele Albuquerque | Brasil</p>
-        <p>Última atualização: 2026</p>
+        <p>&copy; <span id="ano"></span> Gisele Albuquerque | WDD131</p>
     </footer>
 
+    <script>
+        document.querySelector("#ano").textContent =
+            new Date().getFullYear();
+    </script>
 </body>
-
 </html>
-```
-
