@@ -1,1 +1,81 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Organize suas receitas, despesas e metas financeiras com ferramentas simples.">
+  <meta name="author" content="Projeto WDD131">
+  <title>Finanças em Dia | Início</title>
+  <link rel="stylesheet" href="estilos/site.css">
+  <script src="scripts/site.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">Finanças em Dia</a>
+    <button id="menu-button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Navegação principal">
+      <a href="index.html" aria-current="page">Início</a>
+      <a href="planejamento.html">Planejamento</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="metas.html">Metas</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Pequenos passos, grandes mudanças</p>
+      <h1>Seu dinheiro com mais propósito.</h1>
+      <p>Organize suas receitas, entenda suas despesas e transforme seus planos em objetivos possíveis.</p>
+      <a class="button" href="planejamento.html">Organizar meu mês</a>
+      <a class="button secondary" href="metas.html">Criar uma meta</a>
+    </section>
+
+    <section class="container">
+      <h2>Comece pelo básico</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Conheça seu dinheiro</h3>
+          <p>Registre suas receitas e despesas para compreender seu orçamento.</p>
+          <a href="planejamento.html">Registrar movimentações</a>
+        </article>
+        <article class="card">
+          <h3>Planeje seus gastos</h3>
+          <p>Compare sua renda com as despesas e descubra quanto pode sobrar.</p>
+          <a href="calculadora.html">Calcular orçamento</a>
+        </article>
+        <article class="card">
+          <h3>Construa seus objetivos</h3>
+          <p>Acompanhe o progresso das metas que são importantes para você.</p>
+          <a href="metas.html">Acompanhar metas</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Seu resumo financeiro</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Receitas</h3>
+          <p id="home-income">R$ 0,00</p>
+        </article>
+        <article class="card">
+          <h3>Despesas</h3>
+          <p id="home-expenses">R$ 0,00</p>
+        </article>
+        <article class="card">
+          <h3>Saldo</h3>
+          <p id="home-balance">R$ 0,00</p>
+        </article>
+      </div>
+      <p class="notice">Seus dados ficam salvos no armazenamento local deste navegador.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span class="current-year"></span> Finanças em Dia | Projeto WDD131</p>
+    <a href="referencias.html">Referências</a>
+  </footer>
+</body>
+</html>
+

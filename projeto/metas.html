@@ -1,1 +1,66 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cadastre metas financeiras e acompanhe seu progresso.">
+  <title>Metas financeiras | Finanças em Dia</title>
+  <link rel="stylesheet" href="estilos/site.css"
+  <script src="scripts/site.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">Finanças em Dia</a>
+    <button id="menu-button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="planejamento.html">Planejamento</a>
+      <a href="calculadora.html">Calculadora</a>
+      <a href="metas.html" aria-current="page">Metas</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <p class="eyebrow">Passo 3</p>
+      <h1>Metas financeiras</h1>
+      <p>Transforme seus planos em objetivos claros e acompanhe cada passo da sua evolução.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Criar uma meta</h2>
+      <form id="goal-form">
+        <label for="goal-name">Nome da meta</label>
+        <input id="goal-name" name="name" maxlength="70" required placeholder="Ex.: reserva de emergência">
+
+        <label for="goal-target">Valor desejado (R$)</label>
+        <input id="goal-target" name="target" type="number" min="0.01" step="0.01" required>
+
+        <label for="goal-saved">Valor já guardado (R$)</label>
+        <input id="goal-saved" name="saved" type="number" min="0" step="0.01" value="0" required>
+
+        <label for="goal-date">Prazo desejado (opcional)</label>
+        <input id="goal-date" name="date" type="date">
+
+        <button class="button" type="submit">Adicionar meta</button>
+        <p id="goal-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Minhas metas</h2>
+      <div id="goals-list">
+        <p>Você ainda não cadastrou metas.</p>
+      </div>
+      <button class="button danger" id="clear-goals" type="button">Apagar todas as metas</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span class="current-year"></span> Finanças em Dia | Projeto WDD131</p>
+    <a href="referencias.html">Referências</a>
+  </footer>
+</body>
+</html>
+

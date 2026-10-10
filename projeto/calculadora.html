@@ -1,1 +1,75 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calcule seu orçamento mensal e compare renda e despesas.">
+  <title>Calculadora | Finanças em Dia</title>
+  <link rel="stylesheet" href="estilos/site.css"
+  <script src="scripts/site.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">Finanças em Dia</a>
+    <button id="menu-button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="planejamento.html">Planejamento</a>
+      <a href="calculadora.html" aria-current="page">Calculadora</a>
+      <a href="metas.html">Metas</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <p class="eyebrow">Passo 2</p>
+      <h1>Calculadora de orçamento</h1>
+      <p>Informe sua renda e suas despesas para descobrir quanto sobra no final do mês.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Seus valores mensais</h2>
+      <form id="budget-form">
+        <label for="income">Renda líquida (R$)</label>
+        <input id="income" name="income" type="number" min="0.01" step="0.01" required>
+
+        <label for="housing">Moradia e contas (R$)</label>
+        <input id="housing" name="housing" type="number" min="0" step="0.01" value="0" required>
+
+        <label for="food">Alimentação (R$)</label>
+        <input id="food" name="food" type="number" min="0" step="0.01" value="0" required>
+
+        <label for="transport">Transporte (R$)</label>
+        <input id="transport" name="transport" type="number" min="0" step="0.01" value="0" required>
+
+        <label for="debts">Dívidas e parcelas (R$)</label>
+        <input id="debts" name="debts" type="number" min="0" step="0.01" value="0" required>
+
+        <label for="other">Outros gastos (R$)</label>
+        <input id="other" name="other" type="number" min="0" step="0.01" value="0" required>
+
+        <button class="button" type="submit">Calcular orçamento</button>
+      </form>
+    </section>
+
+    <section class="panel" aria-live="polite">
+      <h2>Resultado</h2>
+      <p>Saldo previsto: <strong id="budget-balance">R$ 0,00</strong></p>
+      <p>Despesas totais: <strong id="budget-total-expenses">R$ 0,00</strong></p>
+      <p>Renda comprometida: <strong id="budget-percent">0%</strong></p>
+      <div class="progress-track" id="budget-progress" role="progressbar" aria-label="Percentual da renda comprometida" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <span id="budget-progress-bar"></span>
+      </div>
+      <p id="budget-advice">Preencha os valores e calcule seu orçamento.</p>
+      <p class="notice">Esta calculadora é educativa. Os resultados dependem dos valores informados.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span class="current-year"></span> Finanças em Dia | Projeto WDD131</p>
+    <a href="referencias.html">Referências</a>
+  </footer>
+</body>
+</html>
+
